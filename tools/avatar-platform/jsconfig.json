@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/config": ["config/index.js"],
+			"@/constants": ["constants/index.js"],
+			"@/public/*": ["public/*"],
+			"@/styles/*": ["styles/*"],
+			"@/utils/*": ["utils/*"]
+		}
+	},
+	"exclude": ["**/node_modules/*", "**/build/*", "**/scripts/*"]
+}

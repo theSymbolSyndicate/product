@@ -1,0 +1,11 @@
+builds:
+  - name: Avatar Platform
+    path: tools/avatar-platform
+
+customBuilds:
+  - name: Nightly Job
+    jobName: nightlyJob
+    scriptPath: .github/jenkinsfile/nightlyBuild.groovy
+    triggers:
+      - type: cron
+        schedule: '@midnight'

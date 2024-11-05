@@ -6,8 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint --ext js,mjs,jsx . && stylelint \"**/*.scss\"",
-		"lint:fix": "eslint --ext js,jsx --fix . && stylelint \"**/*.scss\" --fix",
+		"lint": "eslint . && stylelint \"**/*.{scss,css}\"",
+		"lint:fix": "eslint --fix . && stylelint \"**/*.{scss,css}\" --fix",
 		"format": "prettier --write \"**/*.{js,jsx,json,scss}\""
 	},
 	"dependencies": {
@@ -21,23 +21,24 @@
 		"symbol-sdk": "^3.2.2"
 	},
 	"devDependencies": {
-		"dotenv": "^16.0.3",
-		"eslint": "^8.57.0",
-		"eslint-config-next": "15.0.2",
-		"eslint-config-prettier": "^8.8.0",
+		"@eslint/compat": "^1.2.2",
+		"dotenv": "^16.4.5",
+		"eslint": "^9.14.0",
+		"eslint-config-next": "^15.0.2",
+		"eslint-config-prettier": "^9.1.0",
 		"eslint-import-resolver-jsconfig": "^1.1.0",
-		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-prettier": "^5.2.1",
 		"eslint-plugin-readable-tailwind": "^1.8.1",
 		"eslint-plugin-tailwindcss": "^3.17.5",
-		"postcss": "^8",
-		"prettier": "^2.8.8",
+		"postcss": "^8.4.47",
+		"prettier": "^3.3.3",
 		"stylelint": "^16.6.1",
 		"stylelint-config-rational-order": "^0.1.2",
 		"stylelint-config-standard-scss": "^13.1.0",
 		"stylelint-order": "^6.0.4",
-		"tailwindcss": "^3.4.1",
-		"webpack": "^5.95.0"
+		"tailwindcss": "^3.4.14",
+		"webpack": "^5.96.1"
 	},
 	"overrides": {
 		"stylelint": "^16.6.1",

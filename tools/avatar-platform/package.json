@@ -6,8 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint . && stylelint \"**/*.{scss,css}\"",
-		"lint:fix": "eslint --fix . && stylelint \"**/*.{scss,css}\" --fix",
+		"lint": "eslint --ext js,jsx . && stylelint \"**/*.{scss,css}\"",
+		"lint:fix": "eslint --ext js,jsx --fix . && stylelint \"**/*.{scss,css}\" --fix",
 		"format": "prettier --write \"**/*.{js,jsx,json,scss}\""
 	},
 	"dependencies": {
@@ -21,10 +21,10 @@
 		"symbol-sdk": "^3.2.2"
 	},
 	"devDependencies": {
-		"@eslint/compat": "^1.2.2",
 		"dotenv": "^16.4.5",
-		"eslint": "^9.14.0",
-		"eslint-config-next": "^15.0.2",
+		"eslint": "^8.57.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-next": "^14.2.5",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-import-resolver-jsconfig": "^1.1.0",
 		"eslint-plugin-import": "^2.31.0",

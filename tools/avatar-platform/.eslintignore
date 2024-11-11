@@ -1,0 +1,5 @@
+node_modules/
+build/
+coverage/
+setupTests.js
+next.config.js

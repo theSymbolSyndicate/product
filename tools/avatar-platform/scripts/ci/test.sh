@@ -2,4 +2,4 @@
 
 set -ex
 
-echo npm run test:cov
+npm run test:cov

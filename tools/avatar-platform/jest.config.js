@@ -12,8 +12,8 @@ const mapPathsToModuleNameMapper = () => {
 	const paths = jsConfig.compilerOptions.paths || {};
 
 	const moduleNameMapper = Object.entries(paths).reduce((acc, [key, value]) => {
-		const formattedKey = `^${key.replace('*', '(.*)')}$`;
-		const formattedValue = path.join('<rootDir>', value[0].replace('*', '$1'));
+		const formattedKey = `^${key.replace(/\*/g, '(.*)')}$`;
+		const formattedValue = path.join('<rootDir>', value[0].replace(/\*/g, '$1'));
 		acc[formattedKey] = formattedValue;
 
 		return acc;

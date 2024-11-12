@@ -74,3 +74,27 @@ To run the development server, use:
 ```bash
 npm run dev
 ```
+
+## Running Tests
+
+To run tests, use:
+```bash
+npm run test
+```
+
+To run coverage report, use:
+```bash
+npm run test:cov
+```
+
+## Linting
+
+To run lint checks, use:
+```bash
+npm run lint
+```
+
+To fix lint issues, use:
+```bash
+npm run lint:fix
+```

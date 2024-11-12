@@ -2,4 +2,4 @@
 
 set -ex
 
-echo "no tests"
+echo npm run test:cov

@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
+			"@/app/*": ["app/*"],
 			"@/config": ["config/index.js"],
 			"@/constants": ["constants/index.js"],
 			"@/public/*": ["public/*"],

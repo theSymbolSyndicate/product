@@ -27,6 +27,12 @@ These variables are prefixed with `NEXT_PUBLIC_` and are exposed to the browser,
 
 - **`NEXT_PUBLIC_REQUEST_TIMEOUT`**: The timeout duration (in milliseconds) for network requests made by the application. Example: `6000` (6 seconds).
 
+- **`AUTH_SECRET`**: A random string value used by the Auth.js library to encrypt tokens. This should be a strong, randomly generated string, at least 32 characters long. To generate a secret key, use a command like `openssl rand -base64 32` or `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`. Example: `a9b09ffab3aab8770fd4378303b8a5cbd1d4790576477007643f58d179969b33`
+
+- **`AUTH_GOOGLE_ID`**: Google OAuth 2.0 credential (client ID) obtained from the Google API Console.
+
+- **`AUTH_GOOGLE_SECRET`**: Google OAuth 2.0 credential (secret) obtained from the Google API Console.
+
 ## Requirements
 
 - Node.js v20.11.0

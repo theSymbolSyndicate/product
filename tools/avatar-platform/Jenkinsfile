@@ -1,0 +1,11 @@
+defaultCiPipeline {
+	operatingSystem = ['ubuntu']
+	instanceSize = 'medium'
+
+	ciBuildDockerfile = 'javascript.Dockerfile'
+
+	packageId = 'avatar-platform'
+
+	codeCoverageTool = 'c8'
+	minimumCodeCoverage = 95
+}

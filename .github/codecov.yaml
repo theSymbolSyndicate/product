@@ -1,0 +1,25 @@
+# Setting coverage targets per flag
+# Each project represent a package which has one flag
+coverage:
+  status:
+    project:
+      default:
+        target: 95%  # overall project / repo coverage
+
+      avatar-platform:
+        target: auto
+        threshold: 1%
+        flags:
+          - avatar-platform
+
+# New root YAML section = `flags:`
+# This is where you would define every flag from your
+# uploader, and update when new Flags added
+# Each flag is used to represent each package in the
+# monorepo.  This allows code coverage per package.
+
+flags:
+  avatar-platform:
+    paths:
+      - tools/avatar-platform
+    carryforward: true

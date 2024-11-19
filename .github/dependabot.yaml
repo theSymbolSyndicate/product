@@ -1,0 +1,36 @@
+version: 2
+updates:
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: sunday
+    target-branch: dev
+    commit-message:
+      prefix: '[dependency]'
+    groups:
+      github-action-dependencies:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: npm
+    directories:
+      - /tools/avatar-platform
+    schedule:
+      interval: weekly
+      day: sunday
+    target-branch: dev
+    versioning-strategy: increase-if-necessary
+    commit-message:
+      prefix: '[dependency]'
+    groups:
+      npm-dependencies:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch

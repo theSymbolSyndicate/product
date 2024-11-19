@@ -1,0 +1,24 @@
+extends:
+  - ../../_symbol/linters/javascript/default.eslintrc
+  - plugin:tailwindcss/recommended
+  - eslint-config-next
+  - plugin:import/react
+
+rules:
+  import/extensions:
+    - error
+    - always
+    - json: always
+      js: never
+      jsx: never
+  yoda: off
+
+settings:
+  import/resolver:
+    jsconfig:
+      config: jsconfig.json
+
+env:
+  browser: true
+  node: true
+  es2021: true

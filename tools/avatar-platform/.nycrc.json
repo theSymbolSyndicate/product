@@ -1,0 +1,11 @@
+{
+    "exclude": [
+        "node_modules",
+        "coverage",
+        "dist",
+        "build",
+        "public",
+        "__tests__",
+        "*.config.{js,mj,cj}"
+    ]
+}

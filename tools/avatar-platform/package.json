@@ -6,8 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"test": "npx jest",
-		"test:cov": "rimraf coverage && npx jest --coverage --reporter=lcov",
+		"test": "jest",
+		"test:cov": "c8 jest --reporter=lcov",
 		"lint": "eslint --ext js,jsx . && stylelint \"**/*.{scss,css}\"",
 		"lint:fix": "eslint --ext js,jsx --fix . && stylelint \"**/*.{scss,css}\" --fix",
 		"format": "prettier --write \"**/*.{js,jsx,json,scss}\""
@@ -26,6 +26,7 @@
 		"@testing-library/dom": "^10.4.0",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/react": "^16.0.1",
+		"c8": "^10.1.2",
 		"dotenv": "^16.4.5",
 		"eslint": "^8.57.0",
 		"eslint-config-airbnb": "^19.0.4",

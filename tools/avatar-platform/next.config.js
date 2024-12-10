@@ -7,7 +7,10 @@ module.exports = {
 	assetPrefix: process.env.NEXT_PUBLIC_SUBDIRECTORY,
 	reactStrictMode: false,
 	experimental: {
-		scrollRestoration: true
+		scrollRestoration: true,
+		serverActions: {
+			bodySizeLimit: '10mb',
+		},
 	},
 	i18n: i18nConfig.i18n,
 	eslint: {

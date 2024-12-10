@@ -1,0 +1,87 @@
+[
+    {
+        "type": "input",
+        "name": "employeeName",
+        "text": "Employee Name"
+    },
+    {
+        "type": "input",
+        "name": "pseudonym",
+        "text": "Pseudonym (Avatar Identity)"
+    },
+    {
+        "type": "input",
+        "name": "socialMedia",
+        "text": "Social Media Handles"
+    },
+    {
+        "type": "input",
+        "name": "superpower",
+        "text": "Superpower of Your Dreams"
+    },
+    {
+        "type": "input",
+        "name": "weapon",
+        "text": "Weapon of Choice (Real & Fantasy)"
+    },
+    {
+        "type": "input",
+        "name": "favoriteMovie",
+        "text": "Favorite Movie"
+    },
+    {
+        "type": "input",
+        "name": "favoriteCharacter",
+        "text": "Favorite Animation, Comic, or Video Game Character(s)"
+    },
+    {
+        "type": "input",
+        "name": "weekendLife",
+        "text": "What Is Your Best Weekend Life?"
+    },
+    {
+        "type": "input",
+        "name": "achievements",
+        "text": "What Achievement(s) Are You Most Proud Of?"
+    },
+    {
+        "type": "input",
+        "name": "favoriteMusic",
+        "text": "What Is Your Favorite Music Band or Song?"
+    },
+    {
+        "type": "input",
+        "name": "splurgeMoney",
+        "text": "If You Had Stupid Amounts of Splurge Money, You’d Spend It On..."
+    },
+    {
+        "type": "input",
+        "name": "treasureIslandRegion",
+        "text": "What Region of Treasure Island Would You Live In?"
+    },
+    {
+        "type": "input",
+        "name": "favoriteCity",
+        "text": "What Is Your Favorite City to Visit? Why?"
+    },
+    {
+        "type": "input",
+        "name": "coolest",
+        "text": "Alien, Beast, or Robot, Which Is Coolest?"
+    },
+    {
+        "type": "input",
+        "name": "favoriteAnimal",
+        "text": "What Is Your Favorite Animal? Why?"
+    },
+    {
+        "type": "input",
+        "name": "characterExamples",
+        "text": "Share Examples of (or Links to) Characters That Inspire You"
+    },
+    {
+        "type": "input",
+        "name": "easterEggs",
+        "text": "What Easter Eggs Should We Include in the Scene? (Items of Interest That Say 'You')"
+    }
+]

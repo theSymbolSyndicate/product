@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import mongoose from 'mongoose';
 
 const { Schema } = mongoose;

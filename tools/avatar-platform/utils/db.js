@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 export const queryPageWithFilters = async (Model, searchCriteria = {}, filters = {}, populateWith = []) => {
 	const { pageNumber = 1, order = 'desc', orderBy = 'createdAt' } = searchCriteria;
 	const sort = { [orderBy]: order === 'desc' ? -1 : 1 };

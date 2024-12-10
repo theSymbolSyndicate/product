@@ -1,5 +1,5 @@
-import { ProfileDropdown } from './ProfileDropdown';
-import { SignInWithGoogleButton } from './SignInButton';
+import { ProfileDropdown } from '@/components/ProfileDropdown';
+import { SignInWithGoogleButton } from '@/components/SignInButton';
 import { Link, Navbar, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/react';
 
 export const Navigation = ({ menuItems, user }) => {

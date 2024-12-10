@@ -8,18 +8,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 	providers: [Google],
 	callbacks: {
 		async signIn({ user }) {
-			try {
-				const userRecord = await getUserByEmail(user.email);
+			const userRecord = await getUserByEmail(user.email);
 
-				if (!userRecord) {
-					await createUser({
-						email: user.email,
-						name: user.name,
-						role: UserRole.USER
-					});
-				}
-			} catch (error) {
-				console.error(error);
+			if (!userRecord) {
+				await createUser({
+					email: user.email,
+					name: user.name,
+					role: UserRole.USER
+				});
 			}
 
 			return true;

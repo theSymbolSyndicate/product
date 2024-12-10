@@ -38,10 +38,10 @@ export const TaskTable = props => {
 		case 'createdAt':
 			return (
 				<div className="flex flex-col">
-					<p className="text-bold text-sm capitalize">
+					<p className="text-sm capitalize">
 						{timestampToText(cellValue)}
 					</p>
-					<p className="text-bold text-sm capitalize text-default-400">
+					<p className="text-sm capitalize text-default-400">
 						{timestampToText(row.updatedAt)}
 					</p>
 				</div>

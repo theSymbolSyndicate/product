@@ -5,7 +5,7 @@ import { Button, Input } from '@nextui-org/react';
 import Form from 'next/form';
 import { useActionState, useCallback } from 'react';
 import { IoIosCloudUpload as UploadIcon } from 'react-icons/io';
-import { RiMailSendLine } from 'react-icons/ri';
+import { RiMailSendLine as SendIcon } from 'react-icons/ri';
 
 export const AvatarRequestForm = ({ fields }) => {
 	const handleFormSubmission = useCallback(async (prevState, formData) => {
@@ -19,7 +19,7 @@ export const AvatarRequestForm = ({ fields }) => {
 
 		// Submit the form
 		submitAvatarForm(prevState, formData);
-	}, [submitAvatarForm]);
+	}, []);
 	const [state, action, isPending] = useActionState(handleFormSubmission, {});
 
 	return (
@@ -43,14 +43,14 @@ export const AvatarRequestForm = ({ fields }) => {
 				labelPlacement="outside"
 				variant="faded"
 				startContent={
-					<UploadIcon className="pointer-events-none mb-0.5 shrink-0 text-black/50 text-slate-400 dark:text-white/90" />
+					<UploadIcon className="pointer-events-none mb-0.5 shrink-0 text-slate-400 dark:text-white/90" />
 				}
 			/>
 			<Button
 				type="submit"
 				className="w-full"
 				color="primary"
-				startContent={<RiMailSendLine />}
+				startContent={<SendIcon />}
 				isLoading={isPending}
 			>
                 Submit

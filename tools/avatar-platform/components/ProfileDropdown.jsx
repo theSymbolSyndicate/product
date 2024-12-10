@@ -1,7 +1,7 @@
 'use client';
 import { signOutFromAccount } from '@/app/actions';
 import { UserItem } from '@/components/UserItem';
-import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger, User } from '@nextui-org/react';
+import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger } from '@nextui-org/react';
 export const ProfileDropdown = ({ user }) => {
 	return (
 		<Dropdown placement="bottom-end" backdrop="blur">

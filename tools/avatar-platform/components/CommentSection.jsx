@@ -26,7 +26,7 @@ export const CommentSection = ({ user, initialComments, fetchComments, postComme
 		<div className="w-full">
 			<div className="mb-4 w-full">
 				{comments.map((comment, index) => (
-					<div key={index} className="line mb-4 flex w-full items-start">
+					<div key={index} className="mb-4 flex w-full items-start">
 						<Avatar src={comment.createdBy.avatar} className="mr-4" />
 						<div className="flex-1">
 							<div className="flex w-full flex-row justify-between gap-3">

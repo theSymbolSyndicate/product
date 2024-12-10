@@ -1,4 +1,4 @@
-import { getAllUsersByRole } from '../actions';
+import { getAllUsersByRole } from '@/app/actions';
 import { UserTable } from '@/components/UserTable';
 
 export const metadata = {

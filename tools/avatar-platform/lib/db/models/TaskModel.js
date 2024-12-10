@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { TaskStatus } from '@/constants';
 import mongoose from 'mongoose';
 

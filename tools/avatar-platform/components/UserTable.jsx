@@ -1,6 +1,6 @@
 'use client';
 
-import { UserItem } from './UserItem';
+import { UserItem } from '@/components/UserItem';
 import { UserRole } from '@/constants';
 import { timestampToText } from '@/utils/common';
 import { useTableFilter, useTableSearch, useTableSort } from '@/utils/hooks';
@@ -52,14 +52,14 @@ export const UserTable = ({ users }) => {
 		case 'name':
 			return <UserItem user={user} />;
 		case 'role':
-			return <p className="text-bold text-small capitalize">{cellValue}</p>;
+			return <p className="text-small capitalize">{cellValue}</p>;
 		case 'createdAt':
 			return (
 				<div className="flex flex-col">
-					<p className="text-bold text-sm capitalize">
+					<p className="text-sm capitalize">
 						{timestampToText(cellValue)}
 					</p>
-					<p className="text-bold text-sm capitalize text-default-400">
+					<p className="text-sm capitalize text-default-400">
 						{timestampToText(user.updatedAt)}
 					</p>
 				</div>
@@ -135,8 +135,8 @@ export const UserTable = ({ users }) => {
 	}, [
 		filterByNameValue,
 		filterByRoleValue,
-		users,
-		onSearchChange
+		onSearchChange,
+		setFilterByRoleValue
 	]);
 
 	return (

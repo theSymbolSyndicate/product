@@ -1,4 +1,14 @@
-import { changeTaskAssignees, changeTaskStatus, createTaskComment, deleteComment, deleteTask, fetchTask, getAllUsersByRole, getCurrentUser, getTaskComments } from '@/app/actions';
+import {
+	changeTaskAssignees,
+	changeTaskStatus,
+	createTaskComment,
+	deleteComment,
+	deleteTask,
+	fetchTask,
+	getAllUsersByRole,
+	getCurrentUser,
+	getTaskComments
+} from '@/app/actions';
 import { CommentSection } from '@/components/CommentSection';
 import { TaskDetails } from '@/components/TaskDetails';
 import { UserItem } from '@/components/UserItem';
@@ -6,7 +16,7 @@ import { UserGroup, UserRole } from '@/constants';
 import { createLocalUrl } from '@/utils/common';
 import { Button, Card, CardBody, Divider } from '@nextui-org/react';
 import { notFound, redirect } from 'next/navigation';
-import { MdDelete } from 'react-icons/md';
+import { MdDelete as DeleteIcon } from 'react-icons/md';
 
 export const metadata = {
 	name: 'Task',
@@ -68,7 +78,7 @@ export default async function TaskPage({ params }) {
 							<Button
 								color="danger"
 								variant="flat"
-								startContent={<MdDelete />}
+								startContent={<DeleteIcon />}
 								size="sm"
 								onClick={handleDeleteTask}
 							>

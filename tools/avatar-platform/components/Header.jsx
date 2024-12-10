@@ -1,6 +1,6 @@
 'use server';
-import { Navigation } from './Navigation';
 import { getCurrentUser } from '@/app/actions';
+import { Navigation } from '@/components/Navigation';
 import { UserGroup } from '@/constants';
 import { createLocalUrl } from '@/utils/common';
 

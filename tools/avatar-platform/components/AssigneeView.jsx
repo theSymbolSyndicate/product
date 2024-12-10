@@ -1,5 +1,5 @@
 'use client';
-import { UserItem } from './UserItem';
+import { UserItem } from '@/components/UserItem';
 import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@nextui-org/react';
 import { useEffect, useState } from 'react';
 

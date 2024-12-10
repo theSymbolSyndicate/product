@@ -68,7 +68,15 @@ export const TaskDetails = ({ isManageable, initialTaskData, userList, fetchTask
 			>
                 Open Form
 			</Button>
-			<Modal isOpen={formModalController.isOpen} onOpenChange={formModalController.onOpenChange} hideCloseButton shouldBlockScroll scrollBehavior="inside" placement="center" backdrop="blur">
+			<Modal
+				isOpen={formModalController.isOpen}
+				onOpenChange={formModalController.onOpenChange}
+				hideCloseButton
+				shouldBlockScroll
+				scrollBehavior="inside"
+				placement="center"
+				backdrop="blur"
+			>
 				<ModalContent>
 					{onClose => (
 						<>

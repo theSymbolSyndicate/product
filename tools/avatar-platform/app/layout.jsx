@@ -1,4 +1,5 @@
 import { Providers } from './providers';
+import { Header } from '@/components/Header';
 import localFont from 'next/font/local';
 import '@/styles/globals.css';
 
@@ -22,7 +23,10 @@ export default function RootLayout({ children }) {
 		<html lang="en" className="dark">
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				<Providers>
-					{children}
+					<Header />
+					<div className="container mx-auto px-4">
+						{children}
+					</div>
 				</Providers>
 			</body>
 		</html>

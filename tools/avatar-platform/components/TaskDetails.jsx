@@ -1,5 +1,6 @@
 'use client';
 import { AssigneeView } from '@/components/AssigneeView';
+import { PDFCanvas } from '@/components/PDFCanvas';
 import { StatusView } from '@/components/StatusView';
 import { formFields } from '@/config';
 import { timestampToText } from '@/utils/common';
@@ -14,6 +15,7 @@ import {
 } from '@nextui-org/react';
 import { useState } from 'react';
 import { RiAttachment2 as AttachmentIcon } from 'react-icons/ri';
+import { usePDF } from 'react-to-pdf';
 
 export const TaskDetails = ({ isManageable, initialTaskData, userList, fetchTask, changeTaskAssignees, changeTaskStatus }) => {
 	const [task, setTask] = useState(initialTaskData);
@@ -31,6 +33,11 @@ export const TaskDetails = ({ isManageable, initialTaskData, userList, fetchTask
 		await changeTaskStatus(status);
 		await refreshTask();
 	};
+
+	// PDF Generation
+	const { toPDF: generatePdf, targetRef: pdfSourceRef } = usePDF({
+		filename: `${task.id}.pdf`
+	});
 
 	return (
 		<div className="flex w-full flex-col items-start gap-4">
@@ -88,12 +95,13 @@ export const TaskDetails = ({ isManageable, initialTaskData, userList, fetchTask
 										<p className="capitalize">{task.formData[field.name] || '-'}</p>
 									</div>
 								))}
+								<PDFCanvas ref={pdfSourceRef} formData={task.formData} />
 							</ModalBody>
 							<ModalFooter>
 								<Button variant="light" onPress={onClose}>
                                     Close
 								</Button>
-								<Button color="primary" onPress={onClose}>
+								<Button color="primary" onPress={generatePdf}>
                                     Download PDF
 								</Button>
 							</ModalFooter>

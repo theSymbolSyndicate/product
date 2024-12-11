@@ -17,7 +17,11 @@ export default async function middleware(req) {
 		return NextResponse.next();
 
 	// If the user is authenticated, proceed
-	const session = await getToken({ req, secret: process.env.AUTH_SECRET });
+	const session = await getToken({
+		req,
+		secret: process.env.AUTH_SECRET,
+		secureCookie: true
+	});
 	if (session)
 		return NextResponse.next();
 

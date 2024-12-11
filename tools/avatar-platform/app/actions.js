@@ -11,7 +11,7 @@ import { verifySession, verifyUserId, verifyUserRole } from '@/utils/server';
 import { redirect } from 'next/navigation';
 
 export const signInWithGoogle = async () => {
-	await signIn('google', { callbackUrl: createLocalUrl('/dashboard') });
+	await signIn('google', { redirectTo: createLocalUrl('/dashboard') });
 };
 
 export const signOutFromAccount = async () => {

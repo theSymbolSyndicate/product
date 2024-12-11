@@ -16,7 +16,7 @@ export default async function DashboardPage() {
 	return (
 		<div className="flex w-full flex-col gap-4 py-4">
 			<div className="flex w-full flex-row justify-between">
-				<h2>Dashboard</h2>
+				<h2 className="text-xl">Dashboard</h2>
 				<Link href={createLocalUrl('/form')}>
 					<Button color="primary" startContent={<AddIcon />}>Create Task</Button>
 				</Link>

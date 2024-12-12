@@ -1,3 +1,4 @@
+import { config } from '@/config';
 import { createLocalUrl } from '@/utils/common';
 import { NextResponse } from 'next/server';
 import { getToken } from 'next-auth/jwt';
@@ -19,8 +20,8 @@ export default async function middleware(req) {
 	// If the user is authenticated, proceed
 	const session = await getToken({
 		req,
-		secret: process.env.AUTH_SECRET,
-		secureCookie: true
+		secret: config.AUTH_SECRET,
+		secureCookie: config.SSL
 	});
 	if (session)
 		return NextResponse.next();

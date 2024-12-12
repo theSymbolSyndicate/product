@@ -1,5 +1,6 @@
 import { AvatarRequestForm } from '@/components/AvatarRequestForm';
 import { formFields } from '@/config';
+import { Divider } from '@nextui-org/react';
 
 export const metadata = {
 	name: 'Dashboard',
@@ -14,12 +15,13 @@ export default async function FormSubmissionPage() {
 		<div className="flex w-full flex-col items-center gap-4 py-4">
 			<div className="flex w-full flex-col gap-4 md:max-w-xl">
 				<div>
-					<h1>Avatar Art</h1>
-					<h3>Request Form</h3>
+					<h1 className="text-3xl">Avatar Art</h1>
+					<h3 className="text-xl text-secondary">Request Form</h3>
 				</div>
 				<p className="whitespace-pre-line">
 					{text}
 				</p>
+				<Divider />
 				<AvatarRequestForm fields={formFields} />
 			</div>
 		</div>

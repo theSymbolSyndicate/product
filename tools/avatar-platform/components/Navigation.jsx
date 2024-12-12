@@ -1,5 +1,4 @@
 import { ProfileDropdown } from '@/components/ProfileDropdown';
-import { SignInWithGoogleButton } from '@/components/SignInButton';
 import { Link, Navbar, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/react';
 
 export const Navigation = ({ menuItems, user }) => {
@@ -26,7 +25,6 @@ export const Navigation = ({ menuItems, user }) => {
 						</NavbarItem>
 					))}
 				</div>
-				{!isLoggedIn && <SignInWithGoogleButton />}
 				{isLoggedIn && <ProfileDropdown user={user} />}
 			</NavbarContent>
 			<NavbarMenu>
